@@ -5,5 +5,16 @@ import { Injectable } from '@angular/core';
 })
 export class PessoaServiceService {
 
+  nomesPessoas: string[] = ['joão','Maria','Angular 2','Thiago'];
+
   constructor() { }
+
+  getPessoas(): string[]{
+    return this.nomesPessoas;
+  }
+
+  setPessoa(nome: string): void{
+    this.nomesPessoas.push(nome);
+  }
+
 }

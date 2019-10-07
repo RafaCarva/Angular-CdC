@@ -1,1 +1,14 @@
-<p>lista-pessoa works!</p>
+<p>lista-pessoa.component.html</p>
+
+<!--
+    Para o Two way databinding funcionar, importe "FormsModule" no app.module.ts
+-->
+<input type="text" [(ngModel)]="nome">
+<button (click)="enviarNome()">Enviar Nome</button>
+<p>{{nome}}</p>
+
+<ul>
+    <li *ngFor="let pessoa of pessoas">
+        {{pessoa}}
+    </li>
+</ul>

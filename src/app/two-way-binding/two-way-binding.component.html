@@ -1,0 +1,14 @@
+<h2>Two-way-binding</h2>
+<!--
+    Property binding: [ngModel]="nome"
+    Buscar o valor da variável nome e atribuí-la no input.
+
+    Event binding: (ngModelChange)="mudar($event)"
+    Chama o método mudar enviando o conteúdo do input como parâmentro.
+-->
+<input type="text" [ngModel]="nome" (ngModelChange)="mudar($event)">
+
+<br />
+
+<input type="text" bindon-ngModel="nome">
+<p>{{nome}}</p>

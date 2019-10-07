@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {AlertaService} from './alerta.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Angular-CdC';
+
+  constructor(private service: AlertaService){
+
+  }
+
+  enviarMsg():void{
+    this.service.msgAlerta();
+  }
+
 }

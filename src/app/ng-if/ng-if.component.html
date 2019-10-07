@@ -1,0 +1,19 @@
+<h2>*ngIf</h2>
+
+<div *ngIf="true">
+  *ngIf verdadeiro
+</div>
+
+<div *ngIf="false">
+  *ngIf falso
+</div>
+
+<!-- if else-->
+<div>
+  <span *ngIf="getAvailable(); else condition2">
+    Condition is Valid
+  </span>
+  <ng-template #condition2>Condition is invalid from template</ng-template>
+</div>
+
+<p [hidden]="getAvailable()">Parágrafo com hidden</p>
