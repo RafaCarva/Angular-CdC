@@ -1,5 +1,10 @@
 <h2>*ngIf</h2>
 
+<!--
+    *ngIf vai retirar ou adicionar a tag do DOM.
+    [hidden] Apenas esconde a tag (ela continua no DOM)
+-->
+
 <div *ngIf="true">
   *ngIf verdadeiro
 </div>
@@ -8,7 +13,6 @@
   *ngIf falso
 </div>
 
-<!-- if else-->
 <div>
   <span *ngIf="getAvailable(); else condition2">
     Condition is Valid
