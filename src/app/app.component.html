@@ -1,8 +1,8 @@
 <!-- Rotas -->
 <router-outlet></router-outlet>
 
+<h1>Angular CdC</h1>
 <!--
-<h1>app-lista-pessoa</h1>
 <app-lista-pessoa></app-lista-pessoa>
 
 <h1>Service</h1>
@@ -39,13 +39,19 @@
 <app-event-binding></app-event-binding>-->
 
 <!-- 
-    @Input, @Output
-    "desenvolvimento" é o array do componente de app.component
-    "menu" é a var do componente filho
-    .ts <-> .ts
+    @Input
+    * "desenvolvimento" é o array do componente de app.component.
+
+     @Output
+    * "menu" é a var do componente filho (inputoutput.component) .ts <-> .ts
+    * nomeClicado é a var do componente filho input-output.component
+
 -->
+<!--
 <app-input-output 
     [menu]="desenvolvimento"
     (nomeClicado)="valorPassado($event)">
 </app-input-output>
-<p>Você clicou em: {{valor}}</p>
+<p>Você clicou em: {{valor}}</p>-->
+
+<app-formulario></app-formulario>

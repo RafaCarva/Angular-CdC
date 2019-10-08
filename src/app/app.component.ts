@@ -8,7 +8,7 @@ import {AlertaService} from './alerta.service';
 })
 export class AppComponent {
   title = 'Angular-CdC';
-  desenvolvimento: string[] = ['Angular 2', 'JavaScript', 'TypeS cript', 'HTML', 'CSS'];
+  desenvolvimento: string[] = ['Angular 2', 'JavaScript', 'TypeScript', 'HTML', 'CSS'];
   valor: string;
 
   constructor(private service: AlertaService){
@@ -19,6 +19,7 @@ export class AppComponent {
     this.service.msgAlerta();
   }
 
+  //@Output
   valorPassado(valorPassado){
     this.valor = valorPassado;
   }
