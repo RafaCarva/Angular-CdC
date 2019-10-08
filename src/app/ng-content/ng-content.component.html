@@ -1,0 +1,22 @@
+<h2>ng-content</h2>
+<table>
+    <thead>
+        <tr>
+            <th>
+                <ng-content select=".titulo"></ng-content>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <!-- 
+                    *A tag pai será a: app.component.html
+                    *<ng-content> será substituído pelo que estiver dentro da tag no pai (lá em app.component.html)
+                    *Somente substitua ng-content por conteúdo que tenha a classe .corpo   
+                -->
+                <ng-content select=".corpo"></ng-content>
+            </td>
+        </tr>
+    </tbody>
+</table>
