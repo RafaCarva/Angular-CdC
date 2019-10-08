@@ -34,6 +34,18 @@
   <div class="corpo">
     Meu segundo conteúdo com select.
   </div>
-</app-ng-content>-->
+</app-ng-content>
 
-<app-event-binding></app-event-binding>
+<app-event-binding></app-event-binding>-->
+
+<!-- 
+    @Input, @Output
+    "desenvolvimento" é o array do componente de app.component
+    "menu" é a var do componente filho
+    .ts <-> .ts
+-->
+<app-input-output 
+    [menu]="desenvolvimento"
+    (nomeClicado)="valorPassado($event)">
+</app-input-output>
+<p>Você clicou em: {{valor}}</p>
