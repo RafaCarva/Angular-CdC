@@ -1,0 +1,23 @@
+<h2>event-binding</h2>
+
+<button (click)="meuClick()">Clique aqui</button>
+<br />
+<input (keyup)="digitou($event)" />
+<br />
+<input #valorInput (keyup)="digitouVarTemplate(valorInput.value)" />
+
+<h3>Evento keyup para validação de senha.</h3>
+<!-- #qntSenha é uma variável de template -->
+<input type="password" #qntSenha (keyup)="validarSenha(qntSenha.value)">
+<button [disabled]="!habilitarBotao" (click)="gravarSenha(qntSenha.value)">Gravar senha</button>
+
+<h3>Evento keyup.enter adicionar na lista.</h3>
+<input type="text" #conteudo (keyup.enter)="adicionar(conteudo.value); conteudo.value='' ">
+<ul>
+    <li *ngFor="let item of valores">{{item}}</li>
+</ul>
+
+<h3>Blur</h3>
+<!-- blue é o evento de "tirar o foco do input" -->
+<input type="text" #data (blur)="verIdade(data.value)" >
+<p>Você tem: {{idade}} anos de idade.</p>
